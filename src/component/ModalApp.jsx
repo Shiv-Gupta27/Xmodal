@@ -43,25 +43,23 @@ const FormModal = ({ isopen, onclose }) => {
     if (!isopen) return null;
 
     return (
-        <div className="modal-overlay" onClick={onclose}>
-            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                <form className="modal-form" onSubmit={handleSubmit}>
-                    <h3>Fill Details</h3>
-                    <label htmlFor="username">Username:</label><br/>
-                    <input type="text" name="username" id="username" value={username} onChange={(e) => setusername(e.target.value)} required /><br/>
-                    
-                    <label htmlFor="email">Email Address: </label><br/>
-                    <input type="email" name="email" id="email" value={emailAdd} required onChange={(e) => setEmailAdd(e.target.value)} /><br/>
-                    
-                    <label htmlFor="phone">Phone Number:</label><br/>
-                    <input type="number" name="phone" id="phone" value={phoneNum} onChange={(e) => setPhoneNum(e.target.value)} required /><br/>
-                    
-                    <label htmlFor="dob">Date of Birth:</label><br/>
-                    <input type="date" name="dob" id="dob" value={dob} onChange={(e) => setDOB(e.target.value)} required /><br/>
-                    
-                    <button type="submit" className="submit-button">Submit</button>
-                </form>
-            </div>
+        <div className="modal-content" onClick={onclose} >
+            <form className="modal-form" onSubmit={handleSubmit} onClick={(e) => e.stopPropagation()}>
+                <h3>Fill Details</h3>
+                <label htmlFor="username">Username:</label><br/>
+                <input type="text" name="username" id="username" value={username} onChange={(e) => setusername(e.target.value)} required /><br/>
+                
+                <label htmlFor="email">Email Address: </label><br/>
+                <input type="email" name="email" id="email" value={emailAdd} required onChange={(e) => setEmailAdd(e.target.value)} /><br/>
+                
+                <label htmlFor="phone">Phone Number:</label><br/>
+                <input type="number" name="phone" id="phone" value={phoneNum} onChange={(e) => setPhoneNum(e.target.value)} required /><br/>
+                
+                <label htmlFor="dob">Date of Birth:</label><br/>
+                <input type="date" name="dob" id="dob" value={dob} onChange={(e) => setDOB(e.target.value)} required /><br/>
+                
+                <button type="submit" className="submit-button">Submit</button>
+            </form>
         </div>
     );
 };
