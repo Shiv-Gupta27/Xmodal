@@ -72,7 +72,7 @@ export default function ModalApp() {
                 <h1>User Details Modal</h1>
                 <button type="button" onClick={() => setModalopen(true)} className="btn">Open Form</button>
 
-                <FormModal isopen={isopen} onclose={() => setModalopen(false)} />
+                {isopen &&<FormModal isopen={isopen} onclose={() => setModalopen(false)} />}
             </div>
     );
 }
