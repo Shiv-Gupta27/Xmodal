@@ -70,13 +70,11 @@ export default function ModalApp() {
     const [isopen, setModalopen] = useState(false);
 
     return (
-        <div>
             <div className="modal">
                 <h1>User Details Modal</h1>
                 <button type="button" onClick={() => setModalopen(true)} className="btn">Open Form</button>
 
                 <FormModal isopen={isopen} onclose={() => setModalopen(false)} />
             </div>
-        </div>
     );
 }
