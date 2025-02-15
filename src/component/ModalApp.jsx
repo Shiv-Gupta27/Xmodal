@@ -43,8 +43,8 @@ const FormModal = ({ isopen, onclose }) => {
     if (!isopen) return null;
 
     return (
-        <div className="modal-content" onClick={onclose} >
-            <form className="modal-form" onSubmit={handleSubmit} onClick={(e) => e.stopPropagation()}>
+        <div className="modal" onClick={onclose} >
+            <form className="modal-content" onSubmit={handleSubmit} onClick={(e) => e.stopPropagation()}>
                 <h3>Fill Details</h3>
                 <label htmlFor="username">Username:</label><br/>
                 <input type="text" name="username" id="username" value={username} onChange={(e) => setusername(e.target.value)} required /><br/>
@@ -68,7 +68,7 @@ export default function ModalApp() {
     const [isopen, setModalopen] = useState(false);
 
     return (
-            <div className="modal">
+            <div className="openbtn">
                 <h1>User Details Modal</h1>
                 <button type="button" onClick={() => setModalopen(true)} className="btn">Open Form</button>
 

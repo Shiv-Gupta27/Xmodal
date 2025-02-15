@@ -13,37 +13,15 @@
 
 } */
 
-.modal-content {
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.btn{
-    background-color: blue;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    height: 30px;
-}
-
-.modal {
-    position: relative;
+.openbtn{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.modal-form{
+.modal-content {
+
     width: 400px;
     /* height: 60%; */
     display: flex;
@@ -59,7 +37,32 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1000;
+
 }
+
+.btn{
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .modal-form{
+    
+} */
 
 input {
     width: 60%;
