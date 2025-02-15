@@ -45,8 +45,8 @@ const FormModal = ({isopen,onclose})=>{
     if (!isopen) return null;
 
     return(
-        <div className="modal-overlay" onClick={onclose}>
-            <div className="modal-content" onClick={(e)=>e.stopPropagation()} >
+        <div className="modal-content" onClick={onclose}>
+            <div className="modal-overlay" onClick={(e)=>e.stopPropagation()} >
                 <form className="modal-form" onSubmit={handleSubmit}>
                     <h3>Fill Details</h3>
                     <label htmlFor="username">Username:</label><br/>
